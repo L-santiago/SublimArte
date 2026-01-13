@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO BÁSICO -->
+  <meta name="description" content="SublimArte: productos personalizados por sublimación. Tazas, playeras, gorras y más. Calidad, color y atención local." />
+  <meta name="keywords" content="sublimación, productos personalizados, tazas personalizadas, playeras personalizadas, regalos" />
+
+  <title>SublimArte | Productos personalizados</title>
+
+  <style>
+    :root {
+      --rosa: #f7c6d9;
+      --azul: #cce7f0;
+      --lila: #e6d9f2;
+      --verde: #dff2e1;
+      --amarillo: #fff1c1;
+      --texto: #4a4a4a;
+      --blanco: #ffffff;
+      --oscuro: #2f2f2f;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: var(--azul);
+      color: var(--texto);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--rosa), var(--lila));
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    header h1 { font-size: 3.6rem; margin: 0; }
+    header p { max-width: 750px; margin: 15px auto; font-size: 1.2rem; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--blanco);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      z-index: 999;
+    }
+
+    nav a {
+      cursor: pointer;
+      padding: 10px 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--texto);
+    }
+
+    nav a:hover { background: var(--verde); }
+
+    main { max-width: 1250px; margin: auto; padding: 30px 20px; }
+
+    section {
+      display: none;
+      background: var(--blanco);
+      padding: 35px;
+      margin-bottom: 40px;
+      border-radius: 25px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.06);
+      animation: fade 0.5s ease;
+    }
+
+    section.active { display: block; }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 { margin-top: 0; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--verde);
+      padding: 25px;
+      border-radius: 20px;
+    }
+
+    img { width: 100%; border-radius: 15px; }
+
+    table { width: 100%; border-collapse: collapse; }
+    table th, table td { padding: 12px; border-bottom: 1px solid #ddd; }
+
+    details { background: var(--lila); padding: 15px; border-radius: 15px; margin-bottom: 15px; }
+
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer { background: var(--lila); padding: 35px; text-align: center; }
+
+    /* FORMULARIOS */
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: var(--rosa);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SublimArte</h1>
+  <p>Todo lo que necesitas saber sobre nuestros productos personalizados en un solo lugar</p>
+</header>
+
+<nav>
+  <a onclick="mostrar('inicio')">Inicio</a>
+  <a onclick="mostrar('nosotros')">Nosotros</a>
+  <a onclick="mostrar('proceso')">Proceso</a>
+  <a onclick="mostrar('productos')">Productos</a>
+  <a onclick="mostrar('precios')">Precios</a>
+  <a onclick="mostrar('pedido')">Haz tu pedido</a>
+  <a onclick="mostrar('faq')">FAQ</a>
+  <a onclick="mostrar('politicas')">Políticas</a>
+  <a onclick="mostrar('contacto')">Contacto</a>
+</nav>
+
+<main>
+  <section id="inicio" class="active">
+    <h2>Bienvenido</h2>
+    <p>Navega con calma. Esta página fue pensada para resolver tus dudas, mostrarte opciones y facilitar tu pedido paso a paso.</p>
+  </section>
+
+  <section id="nosotros">
+    <h2>Quiénes somos</h2>
+    <p>Somos un negocio local especializado en sublimación. Cuidamos cada pieza como si fuera única, porque lo es.</p>
+  </section>
+
+  <section id="proceso">
+    <h2>Nuestro proceso</h2>
+    <div class="grid">
+      <div class="card">1. Idea o diseño del cliente</div>
+      <div class="card">2. Ajuste de colores y tamaño</div>
+      <div class="card">3. Sublimación con calor profesional</div>
+      <div class="card">4. Revisión y entrega</div>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <div class="grid">
+      <div class="card"><img src="https://via.placeholder.com/300"><p>Tazas</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300"><p>Playeras</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300"><p>Gorras</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300"><p>Termos</p></div>
+      <div class="card"><img src="https://via.placeholder.com/300"><p>Llaveros</p></div>
+    </div>
+  </section>
+
+  <section id="precios">
+    <h2>Precios orientativos</h2>
+    <table>
+      <tr><th>Producto</th><th>Precio desde</th></tr>
+      <tr><td>Taza</td><td>$---</td></tr>
+      <tr><td>Playera</td><td>$---</td></tr>
+      <tr><td>Gorra</td><td>$---</td></tr>
+    </table>
+  </section>
+
+  <section id="pedido">
+    <h2>Simulador de pedido</h2>
+    <p>Completa este formulario y nos pondremos en contacto contigo.</p>
+    <form>
+      <label>Nombre</label>
+      <input type="text" required>
+
+      <label>Producto</label>
+      <select>
+        <option>Taza</option>
+        <option>Playera</option>
+        <option>Gorra</option>
+        <option>Otro</option>
+      </select>
+
+      <label>Cantidad</label>
+      <input type="number" min="1">
+
+      <label>Descripción del diseño</label>
+      <textarea rows="4"></textarea>
+
+      <button type="submit">Enviar pedido</button>
+    </form>
+  </section>
+
+  <section id="faq">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Realizan envíos?</summary><p>Sí, a todo México.</p></details>
+    <details><summary>¿Hay pedidos mínimos?</summary><p>No, trabajamos desde una pieza.</p></details>
+    <details><summary>¿Puedo ver muestra digital?</summary><p>Sí, antes de producir.</p></details>
+  </section>
+
+  <section id="politicas">
+    <h2>Políticas</h2>
+    <ul>
+      <li>Los productos personalizados no tienen cambio.</li>
+      <li>Se solicita anticipo para pedidos grandes.</li>
+      <li>Los tiempos pueden variar según volumen.</li>
+    </ul>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📞 000 000 0000<br>📧 contacto@sublimarte.com<br>⏰ Lunes a Sábado<br>📍 Zona centro</p>
+  </section>
+</main>
+
+<a class="whatsapp" href="https://wa.me/520000000000" target="_blank">WhatsApp</a>
+
+<footer>
+  <p>© 2026 SublimArte · Página informativa completa</p>
+</footer>
+
+<script>
+  function mostrar(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
